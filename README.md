@@ -42,7 +42,7 @@ Python dependencies:
 ```bash
 git clone https://github.com/<USERNAME>/<REPOSITORY_NAME>.git
 cd <REPOSITORY_NAME>
-```bash
+bash```
 
 ### 2. Create and activate a virtual environment
 ```bash
@@ -131,5 +131,6 @@ The data/ directory contains small sample documents used for testing and demonst
 index_documents.py
 
 - Additional chunking strategies can be added by extending the chunking module
+
 
 - The embedding model can be replaced by changing the model configuration
