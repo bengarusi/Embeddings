@@ -79,9 +79,9 @@ The program is executed from the command line and requires:
 2. a chunking strategy
 
 # Supported strategies
-1.fixed
-2.sentence
-3.paragraph
+1.fixed    
+2.sentence    
+3.paragraph    
 
 ## Example commands
 ```bash
@@ -133,5 +133,6 @@ index_documents.py
 
 
 - The embedding model can be replaced by changing the model configuration
+
 
 
