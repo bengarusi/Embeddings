@@ -42,26 +42,26 @@ Python dependencies:
 ```bash
 git clone https://github.com/<USERNAME>/<REPOSITORY_NAME>.git
 cd <REPOSITORY_NAME>
-bash```
+---
 
 ### 2. Create and activate a virtual environment
 ```bash
 python -m venv .venv
 source .venv/bin/activate    # Linux / macOS
 .venv\Scripts\activate       # Windows
-```bash
+---
 
 ### 3. Install Python dependencies
 ```bash
 pip install psycopg python-dotenv pypdf python-docx google-generativeai
-```bash
+---
 
 ## Database Setup
 1. Install PostgreSQL
 2. Enable the pgvector extension:
 ```bash
 CREATE EXTENSION IF NOT EXISTS vector;
-```bash
+---
 3. Create the document_chunks table:
 ```bash
 CREATE TABLE document_chunks (
@@ -72,7 +72,7 @@ CREATE TABLE document_chunks (
     strategy_split TEXT NOT NULL,
     at_created TIMESTAMP WITH TIME ZONE DEFAULT now()
 );
-```bash
+---
 
 ## Usage
 The program is executed from the command line and requires:
@@ -87,7 +87,7 @@ The program is executed from the command line and requires:
 ## Example commands
 ```bash
 python index_documents.py --file data/test.pdf --strategy fixed
-```bash
+---
 
 ## How it Works
 **1. Document Loading**
@@ -121,7 +121,7 @@ python index_documents.py --file data/test.pdf --strategy fixed
 
 Created 6 chunks using strategy 'fixed'
 Indexing completed successfully.
-```bash
+---
 
 ## Data Directory 
 The data/ directory contains small sample documents used for testing and demonstration.
@@ -134,3 +134,4 @@ index_documents.py
 
 
 - The embedding model can be replaced by changing the model configuration
+
