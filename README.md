@@ -11,9 +11,11 @@ running the indexing process using **a single chunking strategy per execution**.
 
 ## Features
 
+- Multiple chunking strategies (fixed, sentence-based, paragraph-based) :
+  The system implements all three required chunking strategies  
+  and allows the user to explicitly select the desired strategy at runtime via a command-line argument.
 - Supports PDF and DOCX documents
 - Extracts and cleans textual content from documents
-- Multiple chunking strategies (fixed, sentence-based, paragraph-based)
 - Overlapping chunks to preserve semantic context
 - Embedding generation using Google Gemini
 - Persistent storage using PostgreSQL and pgvector
@@ -133,6 +135,7 @@ index_documents.py
 
 
 - The embedding model can be replaced by changing the model configuration
+
 
 
 
