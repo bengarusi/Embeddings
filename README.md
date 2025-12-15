@@ -54,11 +54,15 @@ source .venv/bin/activate    # Linux / macOS
 
 ### 3. Install Python dependencies
 ```bash
-pip install psycopg python-dotenv pypdf python-docx google-generativeai
+pip install psycopg[binary] python-dotenv pypdf python-docx google-generativeai
 ```
 
 ## Database Setup
 1. Install PostgreSQL
+```bash
+docker run --name pg-jeen -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=jeen \
+  -p 5432:5432 -d pgvector/pgvector:pg16
+```
 2. Enable the pgvector extension:
 ```bash
 CREATE EXTENSION IF NOT EXISTS vector;
@@ -135,6 +139,7 @@ index_documents.py
 
 
 - The embedding model can be replaced by changing the model configuration
+
 
 
 
